@@ -1,17 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import HeaderComponent from './component/header';
+import Footer from './component/footer';
+import SalaryCalculator from './component/salaryCalculator';
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+function App() {
+  return (
+    <div>
+      <HeaderComponent></HeaderComponent>
+      <h1>Welcome to Basic React Page Fellas...</h1>
+      <SalaryCalculator></SalaryCalculator>
+      <Footer></Footer>
+    </div>
+  )
+}
+
+ReactDOM.render(<App></App>,
   document.getElementById('root')
 );
-
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();

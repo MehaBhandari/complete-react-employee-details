@@ -4,6 +4,7 @@ import HeaderComponent from './component/header';
 import Footer from './component/footer';
 import SalaryCalculator from './component/salaryCalculator';
 import WorkingWithProps from './component/RenderEmpArrayWorkingWithProps';
+import AddEmployee from './component/AddEmployeeWorkingWithClass';
 
 function App() {
   var [employeeArray, setEmployeeArray] = useState([{
@@ -47,9 +48,10 @@ function App() {
   return (
     <div>
       <HeaderComponent></HeaderComponent>
-      <h1>Welcome to Basic React Page Fellas...</h1>
-      <SalaryCalculator></SalaryCalculator>
+      <h1>Welcome to Basic React Page Fellas...</h1>      
+      <AddEmployee></AddEmployee>
       <WorkingWithProps employeeArray={employeeArray} deleteFunction={deleteFunction}></WorkingWithProps>
+      <SalaryCalculator></SalaryCalculator>
       <Footer></Footer>
     </div>
   )
